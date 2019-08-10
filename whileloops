@@ -1,0 +1,10 @@
+name = input("What's your name? ")
+# TODO: Ask the user by name if they understand Python while loops
+answer = input("{}, do you understand Python while loops?\nEnter (yes/no) ".format(name))
+# TODO: Write a while statement that checks if the user doesn't understand while loops
+while answer != 'yes':
+    answer = input("OK, {}, while loops repeat in Python as long as certain Boolean condition is met.\n{}, now do you understand while loops?\nEnter (yes/no)".format(name,name))
+# TODO: Since the user doesn't understand while loops, let's explain them.
+# TODO: Ask the user again, by name, if they understand while loops.  
+# TODO: Outside the while loop, congratulate the user for understanding while loops
+print("That's great, {}! I'm glad that you now understand while loops in Python.".format(name))
