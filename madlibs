@@ -1,0 +1,16 @@
+# MadLibs - Practice Input and Output
+#
+# Template:
+#    I enjoy practice! I find it helps me to __(verb)__ better.
+#    Without practice, my __(noun)__ would probably not even work.
+#    My code is getting more __(adjective)__ every single day!
+# TODO: Prompt the user for parts of speech and store them in variables
+# TODO: Output the template to the screen with the blanks filled out with what the user stated
+line_one = input("Enter any verb ")
+line_two = input("Enter any noun ")
+line_three = input("Enter any adjective ")
+my_name = "Nadia"
+print("I enjoy practice! I find it helps me to",line_one, "better.")
+print("Without practice, my",line_two, "would probably not even work.")
+print("My code is getting more",line_three, "every single day!")
+print("Awesome job, ",my_name, "!")
