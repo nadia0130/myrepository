@@ -1,0 +1,39 @@
+TICKET_PRICE = 10
+SERVICE_CHARGE = 2
+
+tickets_remaining = 100  
+#Create the calculate_price function. It takes how many tickets the user wants to buy and returns how_many * TICKET_PRICE
+def calculate_price(number_of_tickets):
+    #Create a new constant for the 2 dollar service charge (once per transaction)
+    #Add the service charge to our result
+    return (number_of_tickets * TICKET_PRICE) + SERVICE_CHARGE
+
+# Run this code continuously until we run out of tickets
+while tickets_remaining >= 1:
+    print("Welcome! There are {} tickets remaining! ".format(tickets_remaining))
+    name = input("What is your first name? ")
+    #Prompt the user by name and ask how many tickets they would like
+    how_many = input("Welcome {}! How many tickets would you like? ".format(name))
+    #Expect a ValueError to happen and handle it appropriately. Remember to test it out...
+    try:
+        how_many = int(how_many)
+        if how_many > tickets_remaining:
+            raise ValueError("Sorry, there are only {} tickets available".format(tickets_remaining))
+    #Raise a ValueError if request is for more tickets that there are available    
+    except ValueError as err:
+        print("Oh no, we ran into an issue. {}. Please try again! ".format(err))
+    #Calculate the price (multiple the number of tickets they want by the price) and assign it to a variable
+    #Output the price to the screen
+    else:
+        your_total = calculate_price(how_many)
+        print(your_total,"$ is your total due")
+        proceed = input("Do you want to proceed? Enter Y/N ")
+    
+        if proceed.lower() == "y":
+            print("SOLD! Thank you.")
+            tickets_remaining -= how_many     
+            #TODO: Gather credit card info and store it
+        else:
+            print("Thank you anyway, {}!".format(name))
+        
+print("Sorry! They tickets have now been sold out.")
