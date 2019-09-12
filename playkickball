@@ -1,0 +1,13 @@
+import time
+var1 = "good"
+var2 = "bad"
+weather = input("What's the weather like tomorrow?")
+if weather == var1:
+  excitement = "Let's play kickball!"
+  yas = excitement.split()
+  for y in yas:
+    print(y)
+    time.sleep(.5)
+else:
+  print("Let's stay home then.")
+input("Press ENTER to exit at any time.")  
